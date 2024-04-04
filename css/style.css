@@ -8,12 +8,16 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     background-color: #fff;
-    color: #000;
+    color: #222;
     line-height: 1.4;
     margin: 0;
 }
 
 
+
+.logo {
+    width: 125px;
+}
 
 .block {
     width: 100%;
@@ -21,10 +25,6 @@ body {
 
 .bottom-block {
     width: 100%;
-}
-
-.logo {
-    width: 125px;
 }
 
 
@@ -40,10 +40,10 @@ body {
 
 h1 {
     font-size: 2.027rem;
-    font-weight: 600;
-    padding-top: .5em;
+    font-weight: 500;
     padding-bottom: 0;
-    margin-bottom: .5em;
+    padding-top: .5em;
+    margin: 0;
 }
 
 h2 {
@@ -74,7 +74,7 @@ nav ul li a:link,
 nav ul li a:visited {
     text-decoration: none;
     text-transform: uppercase; 
-    color: #000;
+    color: #222;
     font-weight: 600;
     padding-left: 1em;
 }
@@ -82,7 +82,6 @@ nav ul li a:visited {
 
 
 .grid {
-    /* margin: 0; */
     gap: 18px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -111,20 +110,34 @@ nav ul li a:visited {
     border-radius: 5px;
 }
 
+#product {
+    padding-bottom: 3em;
+}
+
+.product-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
 
 
 .limited-edition :nth-child(1) {
+    margin-top: 1em;
     margin-bottom: 0;
     text-transform: uppercase;
     font-weight: 700;
-
 }
 
 .limited-edition :nth-child(2) {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
-
+.product-info :nth-child(4) {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 .button {
     background-color: #000;
@@ -135,27 +148,15 @@ nav ul li a:visited {
     padding: .2em 1em;
     font-size: smaller;
     font-weight: 600;
-    margin-top: auto;
 }
 
-.two-columns {
+.product-info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.product-content {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-#product {
-    padding-bottom: 3em;
-}
-
-
-.grid, .two-columns {
+.grid, .product-info {
     width: 100%;
 }
 
@@ -167,7 +168,7 @@ nav ul li a:visited {
     padding-bottom: 2.5em;
 }
 
-.wrapper-three h2 {
+.wrapper-two h2 {
     text-align: center;
     margin-bottom: 1em;
 }
@@ -180,7 +181,7 @@ nav ul li a:visited {
     padding-bottom: .25em;
 }
 
-.wrapper-four h2 {
+.wrapper-three h2 {
     text-align: center; 
     padding-top: 1.5em;
     margin-top: 0;
@@ -198,7 +199,7 @@ blockquote {
 
 
 
-.wrapper-five h2 {
+.wrapper-four h2 {
     text-align: center;
     padding-top: .5em;
 }
@@ -259,7 +260,7 @@ footer {
         grid-template-areas:
             "column1 column2";
         gap: 20px;
-        }
+    }
 
     .grid-two .column:nth-child(1) {
         grid-area: column1;
@@ -291,7 +292,7 @@ footer {
         grid-area: quote3;
     }
 
-    .wrapper-four h2 {
+    .wrapper-three h2 {
         margin-bottom: 0;
     }
 
@@ -304,14 +305,17 @@ footer {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
     }
-
 }
 
 
 
 @media (min-width: 960px) {
 
-    .grid, .two-columns {
+    h1 {
+        padding-top: 0;
+    }
+    
+    .grid, .product-info {
         width: 50%
     }
 
@@ -319,13 +323,3 @@ footer {
         flex-direction: row;
     }
 }
-
-
-
-
-
-
-#f8fafc;
-#222;
-#000;
-#fff; 
